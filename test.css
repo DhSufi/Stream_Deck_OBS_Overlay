@@ -1,0 +1,1340 @@
+:root {
+    --bitem-color: rgba(255,255,255,0.7);
+    --bstatus-color: rgba(255, 255, 255, 0.7);
+    --scoreA-color: rgba(230, 76, 76, 0.7);
+    --scoreB-color: rgba(248, 37, 37, 0.7);
+    --recordA-color: rgba(121, 240, 42, 0.7);
+    --recordB-color: rgba(20, 122, 29, 0.7);
+    --countryA-color: rgba(50, 47, 233, 0.7);
+    --countryB-color: rgba(12, 33, 100, 0.7);
+    --overlayA-color: rgb(134, 0, 134);
+}
+
+/* STATIC DEFINITIONS */
+@font-face {
+    font-family: 'NS';
+    src:
+        url('Resources/Fonts/NotoSans-ExtraBold.ttf')
+        format('truetype');
+    font-weight: normal; /* or bold, etc. */
+    font-style: normal;  /* or italic, etc. */
+}
+body{
+    margin: 0;
+    font-family: 'NS', monospace;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hp{
+    fill: #22a727;
+    transition: transform 0.5s ease, fill 0.5s ease;
+}
+.item{
+    fill: var(--bitem-color);
+    translate: 0 25px;
+    transition: opacity 0.3s ease;
+}
+.status{
+    fill: var(--bstatus-color);
+    translate: 0 25px;
+}
+
+.bhp{                 
+    clip-path: path("M0 5 L0 65 Q0 70 4 70 Q8 70 8 65 L8 5 Q8 0 4 0 Q0 0 0 5 Z");
+}
+.crophp{
+    clip-path: path("M1 6 L1 64 Q1 69 4 69 Q7 69 7 64 L7 6 Q7 1 4 1 Q1 1 1 6Z");
+}
+
+.A,
+.B {
+    position: absolute;
+}
+.player{
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.player.A{
+    left: -40%;
+}
+.player.B {
+    right: -40%;
+}
+
+.corner.A,
+.hr.A{
+    bottom: 0;
+    left: 0;
+    fill: var(--overlayA-color);
+}
+.vr.A {
+    bottom: -50%;
+    left: 0;
+    fill: var(--overlayA-color);
+}
+
+
+.corner.B,
+.hr.B {
+    top: 0;
+    right: 0;
+    fill: var(--overlayA-color);
+}
+.vr.B{
+    top: -50%;
+    right: 0;
+    fill: var(--overlayA-color);
+}
+
+.canvas{
+    clip-path: path("M0 0 L0 25 L25 25 L25 0 Z"); 
+}
+
+.separator{
+    transform: scaleX(0);
+}
+
+.name.A{
+    translate: 220px -17px;
+}
+.score.A{
+    translate: 675px 0px;
+    fill: var(--scoreA-color);
+    transform-origin: center center;
+    transform-box: fill-box;
+    scale: 0 0;
+}
+.record.A{
+    translate: 90px 0px;
+    fill: var(--recordA-color);
+}
+.country.A{
+    translate: 175px 0px;
+    fill: var(--countryA-color);
+}
+
+.name.B{
+    translate: 525px 51px;
+}
+.score.B{
+    translate: 34px 0px;
+    fill: var(--scoreA-color);
+    transform-origin: center center;
+    transform-box: fill-box;
+    scale: 0 0;
+}
+.record.B{
+    translate: 575px 0px;
+    fill: var(--recordA-color);
+}
+.country.B{
+    translate: 530px 0px;
+    fill: var(--countryA-color);
+}
+
+.A .ball{
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+.A .poke{
+    transform-origin: top right;
+    scale:-1 1;
+}
+
+.A .ball.n1{
+    translate: -80px 80px;
+    scale:-0.1 0.1;
+    transform: rotate(4turn);
+}
+.A .poke.n1{
+    translate: -80px 80px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.A .canvas.i1{
+    translate: 15px 135px;
+}
+.A .canvas.s1{
+    translate: 45px 135px;
+}
+.A .bhp.n1{
+    translate: -15px 90px;
+    opacity: 0;
+}  
+
+.A .ball.n2{
+    translate: -80px 177px;
+    scale:-0.1 0.1;
+    transform: rotate(4turn);
+}
+.A .poke.n2{
+    translate: -80px 177px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.A .canvas.i2{
+    translate: 15px 232px;
+}
+.A .canvas.s2{
+    translate: 45px 232px;  
+}
+.A .bhp.n2{
+    translate: -15px 187px;
+    opacity: 0;
+}  
+
+.A .ball.n3{
+    translate: -80px 274px;
+    scale:-0.1 0.1;
+    transform: rotate(4turn);
+}
+.A .poke.n3{
+    translate: -80px 274px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.A .canvas.i3{
+    translate: 15px 329px;
+}
+.A .canvas.s3{
+    translate: 45px 329px;  
+}
+.A .bhp.n3{
+    translate: -15px 284px;
+    opacity: 0;
+}  
+
+.A .ball.n4{
+    translate: -80px 371px;
+    scale:-0.1 0.1;
+    transform: rotate(4turn);
+}
+.A .poke.n4{
+    translate: -80px 371px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.A .canvas.i4{
+    translate: 15px 426px;
+}
+.A .canvas.s4{
+    translate: 45px 426px; 
+}
+.A .bhp.n4{
+    translate: -15px 381px;
+    opacity: 0;
+}  
+
+
+
+
+
+
+
+
+
+
+.B .ball{
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+.B .poke{
+    transform-origin: top right;
+    scale:1 1;
+}
+
+.B .ball.n1{
+    translate: 80px 16px;
+    scale: 0.1 0.1;
+    transform: rotate(-4turn);
+
+}
+.B .poke.n1{
+    translate: 0px 16px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.B .canvas.i1{
+    translate: 40px 71px;
+}
+.B .canvas.s1{
+    translate: 10px 71px;   
+}
+.B .bhp.n1{
+    translate: 82px 26px;
+    opacity: 0;
+}  
+
+.B .ball.n2{
+    translate: 80px 113px;
+    scale: 0.1 0.1;
+    transform: rotate(-4turn);
+}
+.B .poke.n2{
+    translate: 0px 113px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.B .canvas.i2{
+    translate: 40px 168px;
+}
+.B .canvas.s2{
+    translate: 10px 168px;   
+}
+.B .bhp.n2{
+    translate: 82px 123px;
+    opacity: 0;
+}  
+
+.B .ball.n3{
+    translate: 80px 210px;
+    scale: 0.1 0.1;
+    transform: rotate(-4turn);
+}
+.B .poke.n3{
+    translate: 0px 210px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.B .canvas.i3{
+    translate: 40px 265px;
+}
+.B .canvas.s3{
+    translate: 10px 265px;   
+}
+.B .bhp.n3{
+    translate: 82px 220px;
+    opacity: 0;
+}  
+
+
+.B .ball.n4{
+    translate: 80px 307px;
+    scale: 0.1 0.1;
+    transform: rotate(-4turn);
+}
+.B .poke.n4{
+    translate: 0px 307px;
+    transform: rotate(40deg);
+    scale: 0 0;
+}
+.B .canvas.i4{
+    translate: 40px 362px;
+}
+.B .canvas.s4{
+    translate: 10px 362px;   
+}
+.B .bhp.n4{
+    translate: 82px 317px;
+    opacity: 0;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* KEYFRAMES */
+@keyframes PlayerAIn{
+    0% {
+        left: -40%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+@keyframes PlayerBIn{
+    0% {
+        right: -40%;
+    }
+    100% {
+        right: 0%;
+    }
+}
+@keyframes PlayerAOut{
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -40%;
+    }
+}
+@keyframes PlayerBOut{
+    0% {
+        right: 0%;
+    }
+    100% {
+        right: -40%;
+    }
+}
+
+@keyframes separatorIn{
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes vrAIn{
+    0% {
+        bottom: -50%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}
+@keyframes vrBIn{
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+@keyframes vrAOut{
+    0% {
+        bottom: 0%;
+    }
+    100% {
+        bottom: -50%;
+    }
+}
+@keyframes vrBOut{
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: -50%;
+    }
+}
+
+@keyframes nameAIn{
+    0% {
+        translate: 220px -17px;
+    }
+    100% {
+        translate: 220px 17px;
+    }
+}
+@keyframes nameBIn{
+    0% {
+        translate: 525px 51px;
+    }
+    100% {
+        translate: 525px 17px;
+    }
+}
+@keyframes nameAOut{
+    0% {
+        translate: 220px 17px;
+    }
+    100% {
+        translate: 220px -17px;
+    }
+}
+@keyframes nameBOut{
+    0% {
+        translate: 525px 17px;
+    }
+    100% {
+        translate: 525px 51px;
+    }
+}
+
+
+@keyframes recordAIn{
+    0% {
+        translate: 40px 0px;
+        opacity: 0;
+    }
+    100% {
+        translate: 90px 0px;
+        opacity: 1;
+    }
+}
+@keyframes recordBIn{
+    0% {
+        translate: 625px 0px;
+        opacity: 0;
+    }
+    100% {
+        translate: 575px 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes countryAIn{
+    0% {
+        translate: 125px 0px;
+        opacity: 0;
+    }
+    100% {
+        translate: 175px 0px;
+        opacity: 1;
+    }
+}
+@keyframes countryBIn{
+    0% {
+        translate: 580px 0px;
+        opacity: 0;
+    }
+    100% {
+        translate: 530px 0px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes scoreAIn{
+    0% {
+        scale: 0 0;
+        transform: rotate(-2turn);
+    }
+    100% {
+        scale: 1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes scoreBIn{
+    0% {
+        scale: 0 0;
+        transform: rotate(2turn);
+    }
+    100% {
+        scale: 1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes scoreAOut{
+    0% {
+        scale: 1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        scale: 0 0;
+        transform: rotate(-2turn);
+    }
+}
+@keyframes scoreBOut{
+    0% {
+        scale: 1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        scale: 0 0;
+        transform: rotate(2turn);
+    }
+}
+
+@keyframes ballA1In{
+    0% {
+        translate: -80px 0px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: 33px 80px;
+        scale:-0.3 0.3;
+    }
+    35%{
+        translate: -5px 110px;
+        scale:-0.5 0.5;
+    }
+    65%{
+        translate: -25px 60px;
+        scale:-0.6 0.6;
+    }
+    100% {
+        translate: 0 80px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballA1Out{
+    0% {
+        translate: 0 80px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: -80px 0px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+
+@keyframes ballA2In{
+    0% {
+        translate: -80px 97px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: 33px 177px;
+        scale:-0.3 0.3;
+    }
+    35%{
+        translate: -5px 207px;
+        scale:-0.5 0.5;
+    }
+    65%{
+        translate: -25px 157px;
+        scale:-0.6 0.6;
+    }
+    100% {
+        translate: 0 177px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballA2Out{
+    0% {
+        translate: 0 177px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: -80px 97px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+
+@keyframes ballA3In{
+    0% {
+        translate: -80px 194px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: 33px 274px;
+        scale:-0.3 0.3;
+    }
+    35%{
+        translate: -5px 304px;
+        scale:-0.5 0.5;
+    }
+    65%{
+        translate: -25px 254px;
+        scale:-0.6 0.6;
+    }
+    100% {
+        translate: 0 274px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballA3Out{
+    0% {
+        translate: 0 274px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: -80px 194px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+
+@keyframes ballA4In{
+    0% {
+        translate: -80px 291px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: 33px 371px;
+        scale:-0.3 0.3;
+    }
+    35%{
+        translate: -5px 401px;
+        scale:-0.5 0.5;
+    }
+    65%{
+        translate: -25px 351px;
+        scale:-0.6 0.6;
+    }
+    100% {
+        translate: 0 371px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballA4Out{
+    0% {
+        translate: 0 371px;
+        scale:-1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: -80px 291px;
+        scale:-0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+
+@keyframes ballB1In{
+    0% {
+        translate: 80px -64px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: -33px 16px;
+        scale:0.3 0.3;
+    }
+    35%{
+        translate: 5px 46px;
+        scale:0.5 0.5;
+    }
+    65%{
+        translate: 25px -4px;
+        scale:0.6 0.6;
+    }
+    100% {
+        translate: 0 16px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballB1Out{
+    0% {
+        translate: 0 16px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: 80px -64px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+@keyframes ballB2In{
+    0% {
+        translate: 80px 33px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: -33px 113px;
+        scale:0.3 0.3;
+    }
+    35%{
+        translate: 5px 143px;
+        scale:0.5 0.5;
+    }
+    65%{
+        translate: 25px 93px;
+        scale:0.6 0.6;
+    }
+    100% {
+        translate: 0 113px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballB2Out{
+    0% {
+        translate: 0 113px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: 80px 33px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+@keyframes ballB3In{
+    0% {
+        translate: 80px 130px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: -33px 210px;
+        scale:0.3 0.3;
+    }
+    35%{
+        translate: 5px 240px;
+        scale:0.5 0.5;
+    }
+    65%{
+        translate: 25px 190px;
+        scale:0.6 0.6;
+    }
+    100% {
+        translate: 0 210px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballB3Out{
+    0% {
+        translate: 0 210px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: 80px 130px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+@keyframes ballB4In{
+    0% {
+        translate: 80px 227px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+    25% {
+        translate: -33px 307px;
+        scale:0.3 0.3;
+    }
+    35%{
+        translate: 5px 337px;
+        scale:0.5 0.5;
+    }
+    65%{
+        translate: 25px 287px;
+        scale:0.6 0.6;
+    }
+    100% {
+        translate: 0 307px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+}
+@keyframes ballB4Out{
+    0% {
+        translate: 0 307px;
+        scale:1 1;
+        transform: rotate(0turn);
+    }
+    100% {
+        translate: 80px 227px;
+        scale: 0.1 0.1;
+        transform: rotate(4turn);
+    }
+}
+
+@keyframes pokeA1In{
+    0% {
+        translate: -80px 80px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: -80px 80px;
+        transform: rotate(0deg);
+        scale: -1 1;
+    }
+}
+@keyframes pokeA2In{
+    0% {
+        translate: -80px 177px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: -80px 177px;
+        transform: rotate(0deg);
+        scale: -1 1;
+    }
+}
+@keyframes pokeA3In{
+    0% {
+        translate: -80px 274px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: -80px 274px;
+        transform: rotate(0deg);
+        scale: -1 1;
+    }
+}
+@keyframes pokeA4In{
+    0% {
+        translate: -80px 371px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: -80px 371px;
+        transform: rotate(0deg);
+        scale: -1 1;
+    }
+}
+
+@keyframes pokeB1In{
+    0% {
+        translate: 0px 16px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: 0px 16px;
+        transform: rotate(0deg);
+        scale: 1 1;
+    }
+}
+@keyframes pokeB2In{
+    0% {
+        translate: 0px 113px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: 0px 113px;
+        transform: rotate(0deg);
+        scale: 1 1;
+    }
+}
+@keyframes pokeB3In{
+    0% {
+        translate: 0px 210px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: 0px 210px;
+        transform: rotate(0deg);
+        scale: 1 1;
+    }
+}
+@keyframes pokeB4In{
+    0% {
+        translate: 0px 307px;
+        transform: rotate(40deg);
+        scale: 0 0;
+    }
+    100% {
+        translate: 0px 307px;
+        transform: rotate(0deg);
+        scale: 1 1;
+    }
+}
+
+@keyframes hpA1In{
+    0% {
+        translate: -15px 90px;
+        opacity: 0;
+    }
+    100% {
+        translate: 5px 90px;
+        opacity: 1;
+    }
+}
+@keyframes hpA2In{
+    0% {
+        translate: -15px 187px;
+        opacity: 0;
+    }
+    100% {
+        translate: 5px 187px;
+        opacity: 1;
+    }
+}
+@keyframes hpA3In{
+    0% {
+        translate: -15px 284px;
+        opacity: 0;
+    }
+    100% {
+        translate: 5px 284px;
+        opacity: 1;
+    }
+}
+@keyframes hpA4In{
+    0% {
+        translate: 5px 381px;
+        opacity: 0;
+    }
+    100% {
+        translate: 5px 381px;
+        opacity: 1;
+    }
+}
+
+@keyframes hpB1In{
+    0% {
+        translate: 82px 26px;
+        opacity: 0;
+    }
+    100% {
+        translate: 67px 26px;
+        opacity: 1;
+    }
+}
+@keyframes hpB2In{
+    0% {
+        translate: 82px 123px;
+        opacity: 0;
+    }
+    100% {
+        translate: 67px 123px;
+        opacity: 1;
+    }
+}
+@keyframes hpB3In{
+    0% {
+        translate: 82px 220px;
+        opacity: 0;
+    }
+    100% {
+        translate: 67px 220px;
+        opacity: 1;
+    }
+}
+@keyframes hpB4In{
+    0% {
+        translate: 82px 317px;
+        opacity: 0;
+    }
+    100% {
+        translate: 67px 317px;
+        opacity: 1;
+    }
+}
+
+@keyframes itemIn{
+    0% {
+        translate: 0 25px;
+    }
+    100% {
+        translate: 0 0px;
+    }
+}
+
+@keyframes statusIn{
+    0% {
+        translate: 0 25px;
+    }
+    100% {
+        translate: 0 0px;
+    }
+}
+@keyframes statusOut{
+    0% {
+        translate: 0 0px;
+    }
+    100% {
+        translate: 0 25px;
+    }
+}
+
+
+
+
+
+/* ANIMATIONS */
+.stage1 .separator.n1{
+    animation: separatorIn 0.3s ease-out 0.5s forwards;
+}
+.stage1 .separator.n2{
+    animation: separatorIn 0.3s ease-out 0.6s forwards;
+}
+.stage1 .separator.n3{
+    animation: separatorIn 0.3s ease-out 0.8s forwards;
+}
+
+
+.stage1.player.A{
+    animation: PlayerAIn 0.35s ease-out forwards;
+}
+.stage1.player.B{
+    animation: PlayerBIn 0.35s ease-out forwards;
+}
+.stage0.player.A{
+    animation: PlayerAOut 0.35s ease-out forwards;
+}
+.stage0.player.B{
+    animation: PlayerBOut 0.35s ease-out forwards;
+}
+
+.stage1 .vr.A{
+    animation: vrAIn 0.35s ease-out 0.25s forwards;
+}
+.stage1 .vr.B{
+    animation: vrBIn 0.35s ease-out 0.25s forwards;
+}
+.stage0 .vr.A{
+    animation: vrAOut 0.35s ease-out forwards;
+}
+.stage0 .vr.B{
+    animation: vrBOut 0.35s ease-out forwards;
+}
+
+.stage1 .name.A{
+    animation: nameAIn 0.35s ease-out 0.2s forwards;
+}
+.stage1 .name.B{
+    animation: nameBIn 0.35s ease-out 0.2s forwards;
+}
+.stage0 .name.A{
+    animation: nameAOut 0.35s ease-out forwards;
+}
+.stage0 .name.B{
+    animation: nameBOut 0.35s ease-out forwards;
+}
+
+.stage1 .record.A{
+    animation: recordAIn 0.35s ease-out 0.25s forwards;
+}
+.stage1 .record.B{
+    animation: recordBIn 0.35s ease-out 0.25s forwards;
+}
+
+.stage1 .country.A{
+    animation: countryAIn 0.35s ease-out 0.2s forwards;
+}
+.stage1 .country.B{
+    animation: countryBIn 0.35s ease-out 0.2s forwards;
+}
+
+.stage1 .score.A{
+    animation: scoreAIn 0.35s ease-out 0.2s forwards;
+}
+.stage1 .score.B{
+    animation: scoreBIn 0.35s ease-out 0.2s forwards;
+}
+.stage0 .score.A{
+    animation: scoreAOut 0.35s ease-out forwards;
+}
+.stage0 .score.B{
+    animation: scoreBOut 0.35s ease-out forwards;
+}
+
+.stage1.A .ball.n1{
+    animation: ballA1In 0.9s ease-out 0.5s forwards;
+}
+.stage1.A .ball.n2{
+    animation: ballA2In 0.9s ease-out 0.6s forwards;
+}
+.stage1.A .ball.n3{
+    animation: ballA3In 0.9s ease-out 0.7s forwards;
+}
+.stage1.A .ball.n4{
+    animation: ballA4In 0.9s ease-out 0.8s forwards;
+}
+
+.stage1.B .ball.n1{
+    animation: ballB1In 0.9s ease-out 0.5s forwards;
+}
+.stage1.B .ball.n2{
+    animation: ballB2In 0.9s ease-out 0.6s forwards;
+}
+.stage1.B .ball.n3{
+    animation: ballB3In 0.9s ease-out 0.7s forwards;
+}
+.stage1.B .ball.n4{
+    animation: ballB4In 0.9s ease-out 0.8s forwards;
+}
+
+.stage1.A .show1 .ball.n1{
+    animation: ballA1Out 0.9s ease-out forwards;
+}
+.stage1.A .show1 .ball.n2{
+    animation: ballA2Out 0.9s ease-out forwards;
+}
+.stage1.A .show1 .ball.n3{
+    animation: ballA3Out 0.9s ease-out forwards;
+}
+.stage1.A .show1 .ball.n4{
+    animation: ballA4Out 0.9s ease-out forwards;
+}
+
+.stage1.B .show1 .ball.n1{
+    animation: ballB1Out 0.9s ease-out forwards;
+}
+.stage1.B .show1 .ball.n2{
+    animation: ballB2Out 0.9s ease-out forwards;
+}
+.stage1.B .show1 .ball.n3{
+    animation: ballB3Out 0.9s ease-out forwards;
+}
+.stage1.B .show1 .ball.n4{
+    animation: ballB4Out 0.9s ease-out forwards;
+}
+
+
+.stage1.A .show1 .poke.n1{
+    animation: pokeA1In 0.25s ease-out 0.2s forwards;
+}
+.stage1.A .show1 .poke.n2{
+    animation: pokeA2In 0.25s ease-out 0.2s forwards;
+}
+.stage1.A .show1 .poke.n3{
+    animation: pokeA3In 0.25s ease-out 0.2s forwards;
+}
+.stage1.A .show1 .poke.n4{
+    animation: pokeA4In 0.25s ease-out 0.2s forwards;
+}
+
+.stage1.B .show1 .poke.n1{
+    animation: pokeB1In 0.25s ease-out 0.2s forwards;
+}
+.stage1.B .show1 .poke.n2{
+    animation: pokeB2In 0.25s ease-out 0.2s forwards;
+}
+.stage1.B .show1 .poke.n3{
+    animation: pokeB3In 0.25s ease-out 0.2s forwards;
+}
+.stage1.B .show1 .poke.n4{
+    animation: pokeB4In 0.25s ease-out 0.2s forwards;
+}
+
+.stage1 .show1 .item{
+    animation: itemIn 0.25s ease-out 0.4s forwards;
+}
+
+.stage1.A .show1 .bhp.n1{
+    animation: hpA1In 0.25s ease-out 0.2s forwards;
+}
+.stage1.A .show1 .bhp.n2{
+    animation: hpA2In 0.25s ease-out 0.2s forwards;
+}
+.stage1.A .show1 .bhp.n3{
+    animation: hpA3In 0.25s ease-out 0.2s forwards;
+}
+.stage1.A .show1 .bhp.n4{
+    animation: hpA4In 0.25s ease-out 0.2s forwards;
+}
+
+.stage1.B .show1 .bhp.n1{
+    animation: hpB1In 0.25s ease-out 0.2s forwards;
+}
+.stage1.B .show1 .bhp.n2{
+    animation: hpB2In 0.25s ease-out 0.2s forwards;
+}
+.stage1.B .show1 .bhp.n3{
+    animation: hpB3In 0.25s ease-out 0.2s forwards;
+}
+.stage1.B .show1 .bhp.n4{
+    animation: hpB4In 0.25s ease-out 0.2s forwards;
+}
+
+
+.status.active{
+    animation: statusIn 0.3s ease-out forwards;
+}
+.status.inactive{
+    animation: statusOut 0.3s ease-out forwards;
+}
+
+
+.stage1.A .show0 .ball.n1{
+    animation: ballA1In 0.9s ease-out forwards;
+}
+.stage1.A .show0 .ball.n2{
+    animation: ballA2In 0.9s ease-out forwards;
+}
+.stage1.A .show0 .ball.n3{
+    animation: ballA3In 0.9s ease-out forwards;
+}
+.stage1.A .show0 .ball.n4{
+    animation: ballA4In 0.9s ease-out forwards;
+}
+
+.stage1.B .show0 .ball.n1{
+    animation: ballB1In 0.9s ease-out forwards;
+}
+.stage1.B .show0 .ball.n2{
+    animation: ballB2In 0.9s ease-out forwards;
+}
+.stage1.B .show0 .ball.n3{
+    animation: ballB3In 0.9s ease-out forwards;
+}
+.stage1.B .show0 .ball.n4{
+    animation: ballB4In 0.9s ease-out forwards;
+}
+
+
+.sprite{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.pokebg{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fainted .sprite{
+    opacity: 0.6;
+}
+.fainted .pokebg{
+    opacity: 1;
+}
+.fainted .item{
+    opacity: 0.6;
+}
+
+
+
+/* .A .poke.n1{
+    transform: rotate(40deg);
+    scale: -.1 .1;
+} */
+
+/* .hp.n1{
+    translate: 0 68px;
+} */
+/* .A .status.n1{
+    translate: 0 20px;
+}  */
+
+
+
+
+/* .B .status.n1{
+    translate: 0 20px;
+}  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DELETE */
+#delete{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+}

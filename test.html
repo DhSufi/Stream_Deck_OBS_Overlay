@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="player A">
+        <svg class="corner A" width="5.208%" viewbox="0 0 100 56">
+            <path d="M 0 0 L 80 0 Q 80 20 100 20 L 100 56 L 0 56 Z"></path>
+        </svg>
+
+        <svg class="hr A" width="38.7%" viewbox="0 0 745 36">
+            <path d="M 0 0 L 735 0 Q 745 0 740 10 L 719 26 Q 709 36 699 36 L 0 36 Z"></path>
+            
+            <g class="name A">
+                <defs>
+                    <clipPath id="clipA">
+                        <rect x="0" y="-20" width="450" height="36"></rect>
+                    </clipPath>
+                </defs>
+                <text fill="white" dominant-baseline="central" font-size="28" clip-path="url(#clipA)">GREAT LENGTH NAME SURNAME</text>
+            </g>
+
+            <g class="score A">
+                <path d="M 12 6 Q 18 0 24 6 L 30 12 Q 36 18 30 24 L 24 30 Q 18 36 12 30 L 6 24 Q 0 18 6 12 Z"></path>
+                <text fill="white" x="18" y="18" dominant-baseline="central" text-anchor="middle" fill="white" font-size="20">0</text>
+            </g>
+
+            <g class="record A">
+                <path d="M 9 3 L 71 3 Q 77 3 77 9 L 77 27 Q 77 33 71 33 L 9 33 Q 3 33 3 27 L 3 9 Q 3 3 9 3 Z"></path>
+                <text fill="white" x="40" y="18" dominant-baseline="central" text-anchor="middle" fill="white" font-size="20">0/0/0</text>
+            </g>
+            
+            <g class="country A">
+                <path d="M 9 3 L 31 3 Q 37 3 37 9 L 37 27 Q 37 33 31 33 L 9 33 Q 3 33 3 27 L 3 9 Q 3 3 9 3 Z"></path>
+                <text fill="white" x="20" y="18" dominant-baseline="central" text-anchor="middle" fill="white" font-size="15">ES</text>
+            </g>
+        </svg>
+
+        <svg class="vr A" width="4.166%" viewbox="0 0 80 460" >
+
+            <path d="M 0 25 Q 10 10 25 25 L 70 65 Q 80 75 80 90 L 80 460 L 0 460 Z"></path>
+
+            <g transform-origin="center" class="separator n1">
+                <path fill="white" transform="translate(0,165)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+            </g>
+            <g transform-origin="center" class="separator n2">
+                <path fill="white" transform="translate(0,262)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+            </g>
+            <g transform-origin="center" class="separator n3">
+                <path fill="white" transform="translate(0,359)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+            </g>
+
+            <!-- SLOT A1 -->
+            <g class="slot n1">
+                <g class="ball n1">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n1">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                    
+                </g>
+                <g class="canvas i1">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n1">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s1">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n1">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n1" >
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n1" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+            
+            <!-- SLOT A2 -->
+            <g class="slot n2">
+                <g class="ball n2">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n2">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                </g>
+                <g class="canvas i2">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n2">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s2">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n2">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n2">
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n2" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+
+            <!-- SLOT A3 -->
+            <g class="slot n3">
+                <g class="ball n3">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n3">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                </g>
+                <g class="canvas i3">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n3">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s3">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n3">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n3">
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n3" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+
+            <!-- SLOT A4 -->
+            <g class="slot n4">
+                <g class="ball n4">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n4">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                </g>
+                <g class="canvas i4">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n4">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s4">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n4">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n4">
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n4" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <div class="player B">
+        <svg class="corner B" width="5.208%" viewbox="0 0 100 56">
+            <path d="M 0 0 L 100 0 L100 56 L20 56 Q20 36 0 36 Z"></path>
+        </svg>
+
+        <svg class="hr B" width="38.7%" viewbox="0 0 745 36">
+            <path d="M 745 0 L745 36 L10 36 Q0 36 5 26 L26 10 Q37 0 46 0 Z"></path>
+
+            <g class="name B">
+                <defs>
+                    <clipPath id="clipB">
+                        <rect x="-450" y="-20" width="450" height="36"></rect>
+                    </clipPath>
+                </defs>
+                <text fill="white" dominant-baseline="central" text-anchor="end" font-size="28" clip-path="url(#clipB)">GREAT LENGTH NAME SURNAME</text>
+            </g>
+
+            <g class="score B">
+                <path d="M 12 6 Q 18 0 24 6 L 30 12 Q 36 18 30 24 L 24 30 Q 18 36 12 30 L 6 24 Q 0 18 6 12 Z"></path>
+                <text fill="white" x="18" y="18" dominant-baseline="central" text-anchor="middle" fill="white" font-size="20">0</text>
+            </g>
+
+            <g class="record B">
+                <path d="M 9 3 L 71 3 Q 77 3 77 9 L 77 27 Q 77 33 71 33 L 9 33 Q 3 33 3 27 L 3 9 Q 3 3 9 3 Z"></path>
+                <text fill="white" x="40" y="18" dominant-baseline="central" text-anchor="middle" fill="white" font-size="20">0/0/0</text>
+            </g>
+            
+            <g class="country B">
+                <path d="M 9 3 L 31 3 Q 37 3 37 9 L 37 27 Q 37 33 31 33 L 9 33 Q 3 33 3 27 L 3 9 Q 3 3 9 3 Z"></path>
+                <text fill="white" x="20" y="18" dominant-baseline="central" text-anchor="middle" fill="white" font-size="15">ES</text>
+            </g>
+        </svg>
+
+        <svg class="vr B" width="4.166%" viewbox="0 0 80 460" >
+
+            <path d="M 0 0 L80 0 L80 435 Q70 450 55 435 L10 395 Q0 385 0 370  Z"></path>
+
+            <g transform-origin="center" class="separator n1">
+                <path fill="white" transform="translate(0,101)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+            </g>
+            <g transform-origin="center" class="separator n2">
+                <path fill="white" transform="translate(0,198)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+            </g>
+            <g transform-origin="center" class="separator n3">
+                <path fill="white" transform="translate(0,295)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+            </g>
+
+            <!-- SLOT B1 -->
+            <g class="slot n1">
+                <g class="ball n1">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n1">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                </g>
+                <g class="canvas i1">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n1">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s1">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n1">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n1">
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n1" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+            
+            <!-- SLOT B2 -->
+            <g class="slot n2">
+                <g class="ball n2">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n2">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                </g>
+                <g class="canvas i2">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n2">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s2">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n2">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n2">
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n2" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+
+            <!-- SLOT B3 -->
+            <g class="slot n3">
+                <g class="ball n3">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n3">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                </g>
+                <g class="canvas i3">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n3">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s3">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n3">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n3">
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n3" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+
+            <!-- SLOT B4 -->
+            <g class="slot n4">
+                <g class="ball n4">
+                    <image href="Resources/Pokeballs/pokeballB.png" width="80"/>
+                </g>
+                <g class="poke n4">
+                    <image class="pokebg" href="Resources/faintedbg.png" width="80"/>
+                    <image class="sprite" href="Resources/PokeIcons/812_000.png" width="80"/>
+                </g>
+                <g class="canvas i4">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="item n4">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/ItemsIcons/287.png" width="25"/>
+                    </g>
+                </g>
+                <g class="canvas s4">
+                    <path opacity="0" d="M0 0 L0 25 L25 25 L25 0Z"></path>
+                    <g class="status n4">
+                        <path d="M5 0 L20 0 Q25 0 25 5 L25 20 Q25 25 20 25 L5 25 Q0 25 0 20 L0 5 Q0 0 5 0Z "></path>
+                        <image href="Resources/StatusIcons/burn.png" width="25"/>
+                    </g>
+                </g>
+                <g class="bhp n4">
+                    <path fill="#507165" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    <g class="crophp">
+                        <path fill="grey" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                        <path class="hp n4" d="M0 0 L0 70 L8 70 L8 0 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+</body>
+</html>
