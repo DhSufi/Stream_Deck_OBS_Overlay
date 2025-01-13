@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGC Overlay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pokémon VGC Web Overlay for OBS & Stream Deck Documentation</h1>
+    </header>
+
+    <main>
+        <section id="download">
+            <h2>
+                Download
+            </h2>
+            <p>
+                You can download the Stream Deck Plugin and the default Web Overlay theme for OBS
+                <a target="_blank" href="https://drive.google.com/drive/folders/1axz7MP1XPHy_S-NbgcYIidXleZBRUlNw">HERE</a>
+            </p>
+        </section>
+
+        <section id="tutorial">
+            <h2>
+                Tutorials
+            </h2>
+
+            <div id="vods">
+                <div class="tuto">
+                    USAGE
+                    <div class="udr"></div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQqlRXsvJpI?si=ocUhiXn33i1cEIAp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="tuto">
+                    SETTING UP
+                    <div class="udr"></div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Uk10Q8xf8Ng?si=rPXvY7blWBaSAwNK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="tuto">
+                    CUSTOMIZATION
+                    <div class="udr"></div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Uk10Q8xf8Ng?si=rPXvY7blWBaSAwNK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            </section>
+
+        <section id="customize">
+            <h2>Basic customization</h2>
+
+            <div id="cust">
+                <div class="picker container">
+                    <svg id="overlaysample" viewbox="0 0 745 460">
+                        <path fill="red" class="frame horizontal main" d="M 0 0 L 735 0 Q 745 0 740 10 L 719 26 Q 709 36 699 36 L 0 36 Z"></path>
+                        <path fill="red" class="frame vertical main" d="M 0 25 Q 10 10 25 25 L 70 65 Q 80 75 80 90 L 80 460 L 0 460 Z"></path>
+                        <path fill="red" class="frame corner main" d="M 0 0 L 80 0 Q 80 20 100 20 L 100 56 L 0 56 Z"></path>
+                        <path fill="white" class="separator glyphs" transform="translate(0,165)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+                        <path fill="white" class="separator glyphs" transform="translate(0,262)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+                        <path fill="white" class="separator glyphs" transform="translate(0,359)" d="M 7 0 L 73 0 Q 75 0 75 1 Q 75 2 73 2 L 7 2 Q 5 2 5 1 Q 5 0 7 0 Z"></path>
+                        <path fill="green" class="score" d="M 12 6 Q 18 0 24 6 L 30 12 Q 36 18 30 24 L 24 30 Q 18 36 12 30 L 6 24 Q 0 18 6 12 Z"></path>
+                        <path fill="yellow" class="country" d="M 9 3 L 31 3 Q 37 3 37 9 L 37 27 Q 37 33 31 33 L 9 33 Q 3 33 3 27 L 3 9 Q 3 3 9 3 Z"></path>
+                        <path fill="blue" class="record" d="M 9 3 L 71 3 Q 77 3 77 9 L 77 27 Q 77 33 71 33 L 9 33 Q 3 33 3 27 L 3 9 Q 3 3 9 3 Z"></path>
+                        <text fill="white" class="text glyphs" x="350" y="440" dominant-baseline="central" text-anchor="middle" fill="white" font-size="25">COMPETITOR NAME</text>
+                        <text fill="white" class="text glyphs" x="195" y="442" dominant-baseline="central" text-anchor="middle" fill="white" font-size="20">ES</text>
+                        <text fill="white" class="text glyphs" x="129" y="442" dominant-baseline="central" text-anchor="middle" fill="white" font-size="20">1/0/0</text>
+                        <text fill="white" class="text glyphs" x="687" y="442" dominant-baseline="central" text-anchor="middle" fill="white" font-size="20">1</text>
+                    </svg>
+
+                    <div class="radio-group">
+                        <input type="radio" id="option1" name="options" value="main" checked>
+                        <label for="option1" class="custom-radio">Main Frame</label>
+                
+                        <input type="radio" id="option2" name="options" value="record">
+                        <label for="option2" class="custom-radio">Record Frame</label>
+                
+                        <input type="radio" id="option3" name="options" value="country">
+                        <label for="option3" class="custom-radio">Country Frame</label>
+
+                        <input type="radio" id="option4" name="options" value="score">
+                        <label for="option4" class="custom-radio">Score Frame</label>
+
+                        <input type="radio" id="option5" name="options" value="glyphs">
+                        <label for="option5" class="custom-radio">Text Font</label>
+                    </div>
+
+                    <div id="squaregradual">
+                        <div class="bg" id="bg0">
+                            <div class="bg" id="bg1"></div>
+                            <div class="bg" id="bg2"></div>
+                        </div>
+
+                        <div id="pointer2">
+                            <svg viewBox="0 0 30 30">
+                                <circle id="outdonut" cx="15" cy="15" r="6"/>
+                                <circle id="indonut" cx="15" cy="15" r="4"/>
+                            </svg>
+                        </div>
+    
+                    </div>
+
+                    <div class="rect container">
+                        <div id="rectgradual" class="picker rect"></div>
+                        <div id="pointer1" class="picker rect selector"></div>
+                    </div>
+
+                    <div id="copy1">
+                        COPY STYLE
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="advcust">
+            <h2>
+                Advanced Customization
+            </h2>
+            <p>
+                You can customize each part of the overlay with the following variables.
+
+                <pre id="codeadvcust"><code>
+:root {
+    --bitemA1-color: box background for item A1
+    --bitemA2-color: var(--bitemA1-color);
+    --bitemA3-color: var(--bitemA1-color);
+    --bitemA4-color: var(--bitemA1-color);
+    --bitemB1-color: box background for item B1
+    --bitemB2-color: var(--bitemB1-color);
+    --bitemB3-color: var(--bitemB1-color);
+    --bitemB4-color: var(--bitemB1-color);
+
+    --bstatusA1-color: box background for item A1
+    --bstatusA2-color: var(--bstatusA1-color);
+    --bstatusA3-color: var(--bstatusA1-color);
+    --bstatusA4-color: var(--bstatusA1-color);
+    --bstatusB1-color: box background for item B1
+    --bstatusB2-color: var(--bstatusB1-color);
+    --bstatusB3-color: var(--bstatusB1-color);
+    --bstatusB4-color: var(--bstatusB1-color);
+
+    --bscoreA-color: box background for score A
+    --bscoreB-color: var(--bscoreA-color);
+
+    --brecordA-color: box background for record A
+    --brecordB-color: var(--brecordA-color);
+
+    --bcountryA-color: box background for country A
+    --bcountryB-color: var(--bcountryA-color);
+
+    --overlayA-color: background for overlay A
+    --overlayB-color: var(--overlayA-color);
+
+    --textnameA-color: font color for competitor A name
+    --textnameB-color: var(--textnameA-color);
+
+    --textscoreA-color: font color for score A
+    --textscoreB-color: var(--textscoreA-color);
+
+    --textcountryA-color: font color for country A
+    --textcountryB-color: var(--textcountryA-color);
+
+    --textrecordA-color: font color for record A
+    --textrecordB-color: var(--textrecordA-color);
+
+    --separatorA1-color: color for separator A1
+    --separatorA2-color: var(--separatorA1-color);
+    --separatorA3-color: var(--separatorA1-color);
+
+    --separatorB1-color: color for separator B1
+    --separatorB2-color: var(--separatorB1-color);
+    --separatorB3-color: var(--separatorB1-color);
+}
+                </code></pre>
+
+            </p>
+        </section>
+
+
+        <section id="developers">
+            <h2>Developers</h2>
+            
+            <p>
+                The OBS Browser source will receive custom events that can be listened in JavaScript as follows:
+            </p>
+            
+            <pre class="example">
+                <code class="html">
+&lt;!DOCTYPE html&gt;
+
+&lt;script type="text/javascript"&gt;
+    window.addEventListener('customEvent', function(event) {
+    console.log(event.detail) // outputs: {"key": value, "key", "value", ...}
+    })
+&lt;/script&gt;
+                </code>
+            </pre>
+
+
+            <h3>
+                Custom events
+            </h3>
+            <p>
+                <strong>Event: </strong>slot_show<br>
+                <strong>Content: </strong>{"slot": SLOT, "poke": "filename.png", "item": "filename.png"}<br><br>
+
+                SLOT is String. Can be any of this values: "A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4"<br><br>
+                
+                filename is String that finish with ".png". Can be any Pokémon ID/Item ID of the resource folder: "313_000.png", "128_002.png", ...
+            </p>
+            <br>
+            <p>
+                <strong>Event: </strong>slot_reset<br>
+                <strong>Content: </strong>{"slot": SLOT}<br><br>
+
+                SLOT is String. Can be any of this values: "A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4"
+            </p>
+            <br>
+            <p>
+                <strong>Event: </strong>slot_hp<br>
+                <strong>Content: </strong>{"slot": SLOT, "hp": FLOAT}<br><br>
+
+                SLOT is String. Can be any of this values: "A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4"<br><br>
+                FLOAT from 0 to 1<br><br>
+            </p>
+            <br>
+            <p>
+                <strong>Event: </strong>details<br>
+                <strong>Content: </strong>{"nameA": "String", "recordA", "String", "countryA": "String", "nameB": "String", "recordB", "String", "countryB": "String"}<br><br>
+
+                Be careful, any String can be "UNDEFINIED"
+            </p>
+            <br>
+            <p>
+                <strong>Event: </strong>controls<br>
+                <strong>Content: </strong>{"data": DATA}<br><br>
+
+                DATA is String. Can be any of this values: "show", "AP", "AS", "BP", "BS", "reset"<br>
+                AP: player A score Add<br>
+                AS: Player A score Substract<br>
+                BP: player B score Add<br>
+                BS: player B score Substract<br>
+                reset: Reset scores<br>
+                show: overlay visibility
+            </p>
+            <br>
+            <p>
+                <strong>Event: </strong>status<br>
+                <strong>Content: </strong>{"slot": SLOT, "status": NAME}<br><br>
+
+                SLOT is String. Can be any of this values: "A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4"<br>
+                NAME is String. Can be any of this values: "burn", "sleep", "paralysis", "freeze", "poison"
+            </p>
+            <br>
+            <p>
+                <strong>Event: </strong>faint<br>
+                <strong>Content: </strong>{"slot": SLOT}<br><br>
+
+                SLOT is String. Can be any of this values: "A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4"
+            </p>
+            <br>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'NS';
+    src:
+        url('NotoSans-ExtraBold.ttf')
+        format('truetype');
+    font-weight: normal; /* or bold, etc. */
+    font-style: normal;  /* or italic, etc. */
+}
+body{
+    font-family: 'NS', monospace;
+    background-color:  rgb(5, 6, 45);
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#download,
+#tutorial,
+#customize {
+    user-select: none;
+}
+
+#developers{
+    font-family: courier;
+}
+
+#overlaysample{
+    height: 350px;
+}
+
+.example{
+    background-color:aliceblue;
+    border-radius: 5px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.html{
+    color: black;
+}
+.horizontal{
+    translate: 0 424px;
+}
+.corner{
+    translate: 0 404px;
+}
+.score{
+    translate: 670px 424px;
+}
+.country{
+    translate: 175px 424px;
+}
+.record{
+    translate: 90px 424px;
+}
+
+.rect.container{
+    position: absolute;
+    padding: 1px 0;
+    left: 680px;
+    top: 0;
+}
+.picker.rect{
+    width: 40px;
+    height: 350px;
+    border-radius: 2px;
+    background: linear-gradient(to bottom, red 0%, #ff0 17%, lime 33%, cyan 50%, blue 66%, #f0f 83%, red 100%);
+}
+.picker.container{
+    position: relative;
+    width: 1200px;
+}
+.picker.rect.selector{
+    position: absolute;
+    pointer-events: none;
+    top: 0px;
+    width: 40px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0);
+    outline: solid #b0b0b0;
+    border-radius: 10px;
+}
+
+#squaregradual{
+    position: absolute;
+    left: 780px;
+    top:0;
+    width: 412px;
+    height: 352px;
+}
+
+.bg{
+    position: absolute;
+    width: 412px;
+    height: 352px;
+    /* pointer-events: none; */
+}
+#bg0{
+    background: rgb(255, 0, 0);
+}
+#bg1{
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+}
+#bg2{
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
+}
+
+#pointer2{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    translate: -50% -50%;
+    left: 100%;
+    pointer-events: none;
+}
+#pointer2 svg{
+    height: 30px;
+    width: 30px;
+}
+#outdonut{
+    fill: rgba(0, 0, 255, 0);
+    stroke-width: 5px;
+    stroke: grey;
+}
+#indonut{
+    fill: rgba(0, 0, 255, 0);
+    stroke-width: 3px;
+    stroke: white;
+}
+
+
+.code{
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 3px;
+    color: black;
+}
+
+pre{
+    margin:0;
+    padding: 10px;
+}
+
+.radio-group {
+    position: absolute;
+    left: 470px;
+    top: 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+input[type="radio"] {
+    display: none; /* Hide the original radio button */
+}
+.custom-radio {
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    background-color: white;
+    color: #007BFF;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+input[type="radio"]:checked + .custom-radio {
+    background-color: #007BFF;
+    color: white;
+}
+label{
+    display: flex;
+    justify-content: center;
+}
+
+#copy1{
+    position: absolute;
+    left: 150px;
+    top: 72%;
+    width: 250px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid #007BFF;
+    background-color: aliceblue;
+    color: black;
+}
+
+#copy1:hover{
+    background-color:#007BFF;
+    color: aliceblue;
+}
+
+.tuto{
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+    font-size: 15pt;
+    color: white;
+}
+#vods{
+    display: flex;
+    column-gap: 15px;
+}
+
+section{
+    margin-bottom: 50px;
+}
+.udr{
+    width: 560px;
+    height: 2px;
+    margin-top: -10px;
+    background-color: white;
+}
+
+#cust{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#codeadvcust{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    color: black;
+    width: 500px;
+    border-radius: 5px;
+}
